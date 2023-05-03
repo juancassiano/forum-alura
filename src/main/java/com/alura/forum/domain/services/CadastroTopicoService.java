@@ -49,6 +49,8 @@ public class CadastroTopicoService {
     }
 
 
+
+
     public Topico buscar(String topicoCodigo){
         return topicoRepository.findByCodigo(topicoCodigo).orElseThrow(
                 () -> new RuntimeException("Tópico não encontrado")
