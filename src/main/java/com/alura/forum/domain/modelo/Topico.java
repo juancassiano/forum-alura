@@ -5,7 +5,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import org.hibernate.annotations.CreationTimestamp;
 
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
@@ -28,7 +28,7 @@ public class Topico {
     private String mensagem;
 
     @CreationTimestamp
-    private LocalDateTime dataCriacao;
+    private OffsetDateTime dataCriacao;
 
     @Enumerated(EnumType.STRING)
     private StatusTopico status = StatusTopico.NAO_RESPONDIDO;
@@ -39,11 +39,23 @@ public class Topico {
     private Curso curso;
 
     @OneToMany(mappedBy="topico", cascade = CascadeType.ALL)
-    private List<Resposta> resposta = new ArrayList<Resposta>();
+    private List<Resposta> respostas = new ArrayList<Resposta>();
 
     @PrePersist
     private void gerarCodigo(){
         setCodigo(UUID.randomUUID().toString());
     }
+
+    public void resolver(){
+        setStatus(StatusTopico.SOLUCIONADO);
+    }
+    public void fechar(){
+        setStatus(StatusTopico.FECHADO);
+    }
+
+    public void responder(){
+        setStatus(StatusTopico.NAO_SOLUCIONADO);
+    }
+
 
 }

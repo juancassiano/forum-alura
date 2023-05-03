@@ -8,6 +8,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 
 @Getter
 @Setter
@@ -15,7 +16,7 @@ public class TopicoModel {
     private String codigo;
     private String titulo;
     private String mensagem;
-    private LocalDateTime dataCriacao;
+    private OffsetDateTime dataCriacao;
     private UsuarioModel autor;
     private CursoModel curso;
     private StatusTopico status;

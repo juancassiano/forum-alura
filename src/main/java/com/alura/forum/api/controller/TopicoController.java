@@ -6,7 +6,7 @@ import com.alura.forum.api.model.topico.TopicoInput;
 import com.alura.forum.api.model.topico.TopicoModel;
 import com.alura.forum.domain.modelo.Topico;
 import com.alura.forum.domain.repository.TopicoRepository;
-import com.alura.forum.domain.services.CadastrarTopicoService;
+import com.alura.forum.domain.services.CadastroTopicoService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -15,8 +15,6 @@ import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("/topicos")
@@ -32,7 +30,7 @@ public class TopicoController {
     private TopicoInputDisassembler topicoInputDisassembler;
 
     @Autowired
-    private CadastrarTopicoService cadastrarTopicoService;
+    private CadastroTopicoService cadastrarTopicoService;
 
 
     @GetMapping
@@ -54,6 +52,12 @@ public class TopicoController {
             Topico topico = cadastrarTopicoService.buscar(topicoCodigo);
 
             return topicoModelAssembler.toModel(topico);
+    }
+
+    @DeleteMapping("/{topicoCodigo}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void delete(@PathVariable String topicoCodigo){
+        cadastrarTopicoService.excluir(topicoCodigo);
     }
 
 }
