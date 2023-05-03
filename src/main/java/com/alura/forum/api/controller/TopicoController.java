@@ -14,6 +14,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -52,6 +53,21 @@ public class TopicoController {
             Topico topico = cadastrarTopicoService.buscar(topicoCodigo);
 
             return topicoModelAssembler.toModel(topico);
+    }
+
+    @Transactional
+    @PutMapping("/{topicoCodigo}")
+    public TopicoModel atualizar(@PathVariable String topicoCodigo, @RequestBody @Valid TopicoInput topicoInput){
+
+        try{
+            Topico topicoAtual = cadastrarTopicoService.buscar(topicoCodigo);
+            topicoInputDisassembler.copyToDomainObject(topicoInput, topicoAtual);
+            topicoAtual = cadastrarTopicoService.salvar(topicoAtual);
+            return topicoModelAssembler.toModel(topicoAtual);
+
+        }catch (RuntimeException e){
+            throw new RuntimeException(e.getMessage());
+        }
     }
 
     @DeleteMapping("/{topicoCodigo}")
