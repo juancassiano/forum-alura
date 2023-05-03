@@ -11,4 +11,6 @@ public interface TopicoRepository extends JpaRepository<Topico, Long> {
 
     Optional<Topico> findByCodigo(String codigo);
 
+    Optional<Topico> findByTituloAndMensagem(String titulo, String mensagem);
+
 }

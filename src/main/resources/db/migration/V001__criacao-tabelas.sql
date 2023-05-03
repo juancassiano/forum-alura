@@ -17,6 +17,7 @@ CREATE TABLE topico (
     titulo VARCHAR(255) NOT NULL,
     mensagem VARCHAR(255) NOT NULL,
     status varchar(50) not null,
+    data_criacao datetime not null,
     autor_id BIGINT,
     curso_id BIGINT,
     FOREIGN KEY (autor_id) REFERENCES usuario(id),

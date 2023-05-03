@@ -31,8 +31,8 @@ public class CadastroCursoService {
         }
     }
 
-    public Curso buscar(String cursoCodigo){
-        return cursoRepository.findByCodigo(cursoCodigo).orElseThrow(
+    public Curso buscar(String cursoNome){
+        return cursoRepository.findByNome(cursoNome).orElseThrow(
                 () -> new RuntimeException("Curso não encontrado")
         );
     }
