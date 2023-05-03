@@ -4,6 +4,7 @@ import com.alura.forum.api.model.topico.TopicoModel;
 import com.alura.forum.domain.modelo.Topico;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -18,8 +19,7 @@ public class TopicoModelAssembler {
         return modelMapper.map(topico, TopicoModel.class);
     }
 
-    public List<TopicoModel> toCollectionModel(List<Topico> topicos){
-        return topicos.stream().map(topico -> toModel(topico))
-                .collect(Collectors.toList());
+    public Page<TopicoModel> toPageModel(Page<Topico> topicos){
+        return topicos.map(this::toModel);
     }
 }

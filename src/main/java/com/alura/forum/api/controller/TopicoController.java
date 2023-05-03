@@ -9,6 +9,10 @@ import com.alura.forum.domain.repository.TopicoRepository;
 import com.alura.forum.domain.services.CadastrarTopicoService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -32,9 +36,9 @@ public class TopicoController {
 
 
     @GetMapping
-    public List<TopicoModel> listar(){
-        List<Topico> todosTopicos = topicoRepository.findAll();
-        return topicoModelAssembler.toCollectionModel(todosTopicos);
+    public Page<TopicoModel> listar(@PageableDefault(sort="dataCriacao", direction = Sort.Direction.ASC, size=10)Pageable pageable){
+        Page<Topico> todosTopicos = topicoRepository.findAll(pageable);
+        return topicoModelAssembler.toPageModel(todosTopicos);
     }
 
     @PostMapping

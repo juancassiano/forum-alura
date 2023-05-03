@@ -20,5 +20,5 @@ public class TopicoModel {
     private CursoModel curso;
     private StatusTopico status;
 
-//    private List<Resposta> resposta = new ArrayList<Resposta>();
+//    private List<RespostaModel> resposta;
 }
