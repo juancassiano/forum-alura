@@ -1,4 +1,4 @@
-package com.alura.forum.api.model.input;
+package com.alura.forum.api.model.usuario;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;

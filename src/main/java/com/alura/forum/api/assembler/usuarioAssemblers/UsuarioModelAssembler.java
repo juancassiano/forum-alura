@@ -1,6 +1,6 @@
 package com.alura.forum.api.assembler.usuarioAssemblers;
 
-import com.alura.forum.api.model.UsuarioModel;
+import com.alura.forum.api.model.usuario.UsuarioModel;
 import com.alura.forum.domain.modelo.Usuario;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

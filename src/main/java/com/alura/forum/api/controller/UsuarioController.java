@@ -2,8 +2,8 @@ package com.alura.forum.api.controller;
 
 import com.alura.forum.api.assembler.usuarioAssemblers.UsuarioInputDisassembler;
 import com.alura.forum.api.assembler.usuarioAssemblers.UsuarioModelAssembler;
-import com.alura.forum.api.model.UsuarioModel;
-import com.alura.forum.api.model.input.UsuarioInput;
+import com.alura.forum.api.model.usuario.UsuarioModel;
+import com.alura.forum.api.model.usuario.UsuarioInput;
 import com.alura.forum.domain.modelo.Usuario;
 import com.alura.forum.domain.repository.UsuarioRepository;
 import com.alura.forum.domain.services.CadastroUsuarioService;
@@ -46,12 +46,22 @@ public class UsuarioController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public UsuarioModel salvar(@RequestBody @Valid UsuarioInput usuarioInput){
+    public UsuarioModel salvar(@RequestBody @Valid UsuarioInput usuarioInput) {
         Usuario usuario = usuarioInputDisassembler.toDomainObject(usuarioInput);
         usuario = cadastroUsuariosService.salvar(usuario);
 
         return usuarioModelAssembler.toModel(usuario);
     }
 
-
+    @PutMapping("/{usuarioCodigo}")
+    public UsuarioModel atualizar(@PathVariable String usuarioCodigo, @Valid @RequestBody UsuarioInput usuarioInput){
+        try{
+            Usuario usuarioAtual = cadastroUsuariosService.buscar(usuarioCodigo);
+            usuarioInputDisassembler.copyToDomainObject(usuarioInput, usuarioAtual);
+            usuarioAtual = cadastroUsuariosService.salvar(usuarioAtual);
+            return usuarioModelAssembler.toModel(usuarioAtual);
+        }catch (RuntimeException e){
+            throw new RuntimeException();
+        }
+    }
 }
