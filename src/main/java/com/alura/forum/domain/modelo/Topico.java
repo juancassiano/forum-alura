@@ -38,7 +38,7 @@ public class Topico {
     @ManyToOne
     private Curso curso;
 
-    @OneToMany(mappedBy="topico", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy="topico", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Resposta> respostas = new ArrayList<Resposta>();
 
     @PrePersist

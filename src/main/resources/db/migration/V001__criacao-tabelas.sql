@@ -31,6 +31,7 @@ CREATE TABLE resposta (
     autor_id BIGINT,
     status VARCHAR(255) NOT NULL,
     data_criacao datetime not null,
+    solucao tinyint(1) DEFAULT 0,
     FOREIGN KEY (topico_id) REFERENCES topico(id),
     FOREIGN KEY (autor_id) REFERENCES usuario(id)
 )engine=InnoDB default charset=utf8;

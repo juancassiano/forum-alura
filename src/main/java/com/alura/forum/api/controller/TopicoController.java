@@ -5,6 +5,8 @@ import com.alura.forum.api.assembler.topicoAssemblers.TopicoModelAssembler;
 import com.alura.forum.api.model.topico.TopicoInput;
 import com.alura.forum.api.model.topico.TopicoModel;
 import com.alura.forum.domain.modelo.Topico;
+import com.alura.forum.domain.modelo.exception.EntidadeNaoEncontradoException;
+import com.alura.forum.domain.modelo.exception.TopicoNaoEncontradoException;
 import com.alura.forum.domain.repository.TopicoRepository;
 import com.alura.forum.domain.services.CadastroTopicoService;
 import jakarta.validation.Valid;
@@ -61,12 +63,13 @@ public class TopicoController {
 
         try{
             Topico topicoAtual = cadastrarTopicoService.buscar(topicoCodigo);
-            topicoInputDisassembler.copyToDomainObject(topicoInput, topicoAtual);
-            topicoAtual = cadastrarTopicoService.salvar(topicoAtual);
+            Topico topicoAtualizado = topicoInputDisassembler.toDomainObject(topicoInput);
+            topicoAtualizado.setCodigo(topicoCodigo);
+            topicoAtual = cadastrarTopicoService.atualizar(topicoCodigo,topicoAtualizado);
             return topicoModelAssembler.toModel(topicoAtual);
 
-        }catch (RuntimeException e){
-            throw new RuntimeException(e.getMessage());
+        }catch (TopicoNaoEncontradoException e){
+            throw new TopicoNaoEncontradoException(e.getMessage());
         }
     }
 

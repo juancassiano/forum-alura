@@ -5,7 +5,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import org.hibernate.annotations.CreationTimestamp;
 
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 
 @Data
 @Entity
@@ -22,11 +22,9 @@ public class Resposta {
     @ManyToOne
     private Topico topico;
     @CreationTimestamp
-    private LocalDateTime dataCriacao;
+    private OffsetDateTime dataCriacao;
     @ManyToOne
     private Usuario autor;
+    @Column(nullable = false)
     private Boolean solucao = Boolean.FALSE;
-
-
-
 }
