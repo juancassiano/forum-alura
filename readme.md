@@ -52,4 +52,4 @@ Nossa API se concentrará especificamente nos tópicos, e deve permitir aos usu�
   - Atualizar Status para Solucionado - Fechado - Não Solucionado
 
 ## Banco do Projeto
-<img src="" />
+<img src="https://raw.githubusercontent.com/juancassiano/forum-alura/master/src/main/resources/assets/forum_alura_api.png" />
