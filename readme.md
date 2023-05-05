@@ -23,6 +23,7 @@ Nossa API se concentrará especificamente nos tópicos, e deve permitir aos usu�
   -  Atualizar um tópico
   -  Eliminar um tópico
 
+## Endpoints Implementados
 :technologist: Endpoint de Usuário
   - Criar um Usuário
   - Buscar um Usuário
