@@ -1,7 +1,5 @@
 package com.alura.forum.core;
 
-import com.alura.forum.api.model.resposta.RespostaInput;
-import com.alura.forum.domain.modelo.Resposta;
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

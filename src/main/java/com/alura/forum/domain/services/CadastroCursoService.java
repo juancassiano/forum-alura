@@ -1,8 +1,10 @@
 package com.alura.forum.domain.services;
 
 import com.alura.forum.domain.modelo.Curso;
+import com.alura.forum.domain.modelo.exception.CursoNaoEncontradaException;
 import com.alura.forum.domain.repository.CursoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -25,14 +27,14 @@ public class CadastroCursoService {
            Long cursoId = curso.getId();
            cursoRepository.deleteById(cursoId);
 
-        }catch (RuntimeException e){
-            throw new RuntimeException();
+        }catch(EmptyResultDataAccessException e){
+            throw new CursoNaoEncontradaException(cursoCodigo);
         }
     }
 
     public Curso buscar(String cursoNome){
         return cursoRepository.findByNome(cursoNome).orElseThrow(
-                () -> new RuntimeException("Curso não encontrado")
+                () -> new CursoNaoEncontradaException(cursoNome)
         );
     }
 

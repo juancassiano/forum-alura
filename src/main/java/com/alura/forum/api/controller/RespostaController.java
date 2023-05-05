@@ -7,10 +7,6 @@ import com.alura.forum.api.model.resposta.RespostaModel;
 import com.alura.forum.domain.modelo.Resposta;
 import com.alura.forum.domain.modelo.Topico;
 import com.alura.forum.domain.modelo.Usuario;
-import com.alura.forum.domain.modelo.exception.EntidadeNaoEncontradoException;
-import com.alura.forum.domain.modelo.exception.RespostaNaoEncontradaException;
-import com.alura.forum.domain.modelo.exception.UsuarioNaoEncontradoException;
-import com.alura.forum.domain.repository.RespostaRepository;
 import com.alura.forum.domain.services.CadastroRespostaService;
 import com.alura.forum.domain.services.CadastroTopicoService;
 import com.alura.forum.domain.services.CadastroUsuarioService;
@@ -32,8 +28,6 @@ public class RespostaController {
 
     @Autowired
     private CadastroRespostaService cadastroRespostaService;
-    @Autowired
-    private RespostaRepository respostaRepository;
     @Autowired
     private RespostaModelAssembler respostaModelAssembler;
     @Autowired

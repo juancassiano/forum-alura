@@ -1,7 +1,6 @@
 package com.alura.forum.api.assembler.cursoAssemblers;
 
 import com.alura.forum.api.model.curso.CursoInput;
-import com.alura.forum.api.model.curso.CursoModel;
 import com.alura.forum.domain.modelo.Curso;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
