@@ -8,12 +8,12 @@ import lombok.Setter;
 @Setter
 public class TopicoInput {
 
-    @NotBlank(message = "Não pode ser nulo")
+    @NotBlank(message = "{titulo.obrigadorio}")
     private String titulo;
-    @NotBlank(message = "Não pode ser nulo")
+    @NotBlank(message = "{mensagem.obrigatorio}")
     private String mensagem;
-    @NotBlank(message = "Não pode ser nulo")
+    @NotBlank(message = "{codigoAutor.obrigatorio}")
     private String codigoAutor;
-    @NotBlank(message = "Não pode ser nulo")
+    @NotBlank(message = "{nomeCurso.obrigatorio}")
     private String nomeCurso;
 }

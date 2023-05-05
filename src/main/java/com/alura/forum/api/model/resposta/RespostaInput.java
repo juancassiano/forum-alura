@@ -8,8 +8,8 @@ import lombok.Setter;
 @Setter
 public class RespostaInput {
 
-    @NotBlank(message = "Não pode ser nulo")
+    @NotBlank(message = "{mensagem.obrigatorio}")
     private String mensagem;
-    @NotBlank(message = "Não pode ser nulo")
+    @NotBlank(message = "{codigoAutor.obrigatorio}")
     private String codigoAutor;
 }
