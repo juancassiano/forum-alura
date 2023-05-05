@@ -1,7 +1,5 @@
 package com.alura.forum.api.model.resposta;
 
-import com.alura.forum.api.model.usuario.UsuarioInput;
-import com.alura.forum.domain.modelo.Usuario;
 import jakarta.validation.constraints.NotBlank;
 import lombok.Getter;
 import lombok.Setter;

@@ -29,7 +29,6 @@ CREATE TABLE resposta (
     mensagem VARCHAR(255) NOT NULL,
     topico_id BIGINT,
     autor_id BIGINT,
-    status VARCHAR(255) NOT NULL,
     data_criacao datetime not null,
     solucao tinyint(1) DEFAULT 0,
     FOREIGN KEY (topico_id) REFERENCES topico(id),

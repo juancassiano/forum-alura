@@ -21,6 +21,6 @@ public class TopicoModel {
     private UsuarioModel autor;
     private CursoModel curso;
     private StatusTopico status;
-//    private List<RespostaModel> respostas;
+    private List<RespostaModel> respostas;
 
 }

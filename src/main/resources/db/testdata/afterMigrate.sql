@@ -23,6 +23,6 @@ insert into topico(id,codigo, titulo, mensagem, status, data_criacao,autor_id, c
 insert into topico(id,codigo, titulo, mensagem, status, data_criacao,autor_id, curso_id) values(2,'0c193ef9-7ed6-4ffb-b547-6fb642b63433', 'Bootstrap ou Tailwind', 'Qual CSS usar?','NAO_RESPONDIDO',utc_timestamp, 1, 2);
 insert into topico(id,codigo, titulo, mensagem, status, data_criacao,autor_id, curso_id) values(3,'bc263376-6be9-468a-bf9f-067bfa7a202f', 'Spring JPA com Flyway', 'Estou com problemas para criar as migrations','NAO_RESPONDIDO',utc_timestamp, 2, 1);
 
-insert into resposta(id,mensagem,data_criacao,status,solucao,topico_id,autor_id) values(1,'Tailwind, com toda a certeza. Leia a documentação no site', utc_timestamp,'NAO_SOLUCIONADO',0,2,3);
-insert into resposta(id,mensagem,data_criacao,status,solucao,topico_id,autor_id) values(2,'Hey, achei incrível o uso de Records, me mande o seu github para que eu possa ver o código completo.', utc_timestamp,'NAO_SOLUCIONADO',0,1,3);
-insert into resposta(id,mensagem,data_criacao,status,solucao,topico_id,autor_id) values(3,'Acho que é mais fácil do que criar várias DTOs, mas veja as boas práticas antes de implementar no seu código.', utc_timestamp,'NAO_SOLUCIONADO',0,1,2);
+insert into resposta(id,mensagem,data_criacao,solucao,topico_id,autor_id) values(1,'Tailwind, com toda a certeza. Leia a documentação no site', utc_timestamp,0,2,3);
+insert into resposta(id,mensagem,data_criacao,solucao,topico_id,autor_id) values(2,'Hey, achei incrível o uso de Records, me mande o seu github para que eu possa ver o código completo.', utc_timestamp,0,1,3);
+insert into resposta(id,mensagem,data_criacao,solucao,topico_id,autor_id) values(3,'Acho que é mais fácil do que criar várias DTOs, mas veja as boas práticas antes de implementar no seu código.', utc_timestamp,0,1,2);

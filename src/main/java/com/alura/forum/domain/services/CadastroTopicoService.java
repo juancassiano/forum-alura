@@ -8,6 +8,7 @@ import com.alura.forum.domain.modelo.exception.TopicoEmUsoException;
 import com.alura.forum.domain.modelo.exception.TopicoNaoEncontradoException;
 import com.alura.forum.domain.repository.TopicoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -64,8 +65,8 @@ public class CadastroTopicoService {
 
     @Transactional
     public void excluir(String topicoCodigo){
-        Topico topico = buscar(topicoCodigo);
-        topicoRepository.deleteById(topico.getId());
+            Topico topico = buscar(topicoCodigo);
+            topicoRepository.deleteById(topico.getId());
     }
 
     public Topico buscar(String topicoCodigo){

@@ -1,6 +1,6 @@
 package com.alura.forum.api.model.resposta;
 
-import com.alura.forum.domain.modelo.Usuario;
+import com.alura.forum.api.model.usuario.UsuarioModel;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -8,6 +8,6 @@ import lombok.Setter;
 @Setter
 public class RespostaModel {
     private String mensagem;
-    private Usuario autor;
+    private UsuarioModel autor;
     private boolean solucao;
 }
