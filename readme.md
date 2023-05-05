@@ -3,7 +3,7 @@
 <p align="center">
   <img src="https://img.shields.io/static/v1?label=JAVA&message=1.8&color=blue&style=for-the-badge"/>
     <img src="https://img.shields.io/static/v1?label=JAVA&message=1.8&color=blue&style=for-the-badge"/>
-    <img src="https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=blue&style=for-the-badge" />
+    <img src="https://img.shields.io/static/v1?label=Spring&message=ONE&color=blue&style=for-the-badge" />
   <img src="http://img.shields.io/static/v1?label=Oracle&message=ONE&color=blue&style=for-the-badge"/>
   <img src="http://img.shields.io/static/v1?label=STATUS&message=FINALIZADO&color=blue&style=for-the-badge"/>
 </p>
@@ -24,28 +24,28 @@ Nossa API se concentrará especificamente nos tópicos, e deve permitir aos usu�
   -  Eliminar um tópico
 
 :technologist: Endpoint de Usuário
-      - Criar um Usuário
-      - Buscar um Usuário
-      - Atualizar um Usuário
-      - Listar Usuários
+  - Criar um Usuário
+  - Buscar um Usuário
+  - Atualizar um Usuário
+  - Listar Usuários
 
 :teacher:      Endpoint de Curso
-      - Criar um Curso
-      - Listar cursos
+  - Criar um Curso
+  - Listar cursos
 
 :question:      Endpoint de Tópico
-      - Criar um Tópico
-      - Buscar um Tópico
-      - Listar Tópicos
-      - Deletar um Tópico
-      - Atualizar um Tópico
+  - Criar um Tópico
+  - Buscar um Tópico
+  - Listar Tópicos
+  - Deletar um Tópico
+  - Atualizar um Tópico
 
 :heavy_check_mark:      Endpoint de Resposta
-      - Criar uma Resposta
-      - Buscar uma Resposta
-      - Deletar uma Resposta
-      - Atualizar uma Resposta
-      - Listar Respostas
+  - Criar uma Resposta
+  - Buscar uma Resposta
+  - Deletar uma Resposta
+  - Atualizar uma Resposta
+  - Listar Respostas
 
 :o:      Endpoint de Status
-      - Atualizar Status para Solucionado | Fechado | Não Solucionado
+  - Atualizar Status para Solucionado | Fechado | Não Solucionado
