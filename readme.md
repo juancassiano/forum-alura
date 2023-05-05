@@ -49,4 +49,4 @@ Nossa API se concentrará especificamente nos tópicos, e deve permitir aos usu�
   - Listar Respostas
 
 :o:      Endpoint de Status
-  - Atualizar Status para Solucionado | Fechado | Não Solucionado
+  - Atualizar Status para Solucionado - Fechado - Não Solucionado
