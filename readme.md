@@ -50,3 +50,6 @@ Nossa API se concentrará especificamente nos tópicos, e deve permitir aos usu�
 
 :o:      Endpoint de Status
   - Atualizar Status para Solucionado - Fechado - Não Solucionado
+
+## Banco do Projeto
+<img src="" />
