@@ -64,7 +64,7 @@ Nossa API se concentrará especificamente nos tópicos, e deve permitir aos usu�
   <img height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original-wordmark.svg">
   <img height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg">
   <img height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg">
-  <img height="30" width="40" src="">
-  <img height="30" width="40" src="https://github.com/devicons/devicon/blob/master/icons/express/express-original-wordmark.svg">
+  <img height="30" width="40" src="https://raw.githubusercontent.com/juancassiano/forum-alura/fd2167ae604c808a8c6c02f4bddb4e0c8b585584/src/main/resources/assets/swagger-svgrepo-com.svg">
+  <img height="30" width="40" src="https://raw.githubusercontent.com/juancassiano/forum-alura/fd2167ae604c808a8c6c02f4bddb4e0c8b585584/src/main/resources/assets/postman-icon-svgrepo-com.svg">
 
 </div>
