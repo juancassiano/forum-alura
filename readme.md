@@ -1,11 +1,10 @@
 # Challenge Oracle - Forum  <img align="right" src="https://cursos.alura.com.br/assets/images/certificates/new/logo/oracle-one-logo.png"><br><br>
 
 <p align="center">
-  <img src="https://img.shields.io/static/v1?label=JAVA&message=1.8&color=blue&style=for-the-badge"/>
     <img src="https://img.shields.io/static/v1?label=JAVA&message=1.8&color=blue&style=for-the-badge"/>
     <img src="https://img.shields.io/static/v1?label=Spring&message=ONE&color=blue&style=for-the-badge" />
-  <img src="http://img.shields.io/static/v1?label=Oracle&message=ONE&color=blue&style=for-the-badge"/>
-  <img src="http://img.shields.io/static/v1?label=STATUS&message=FINALIZADO&color=blue&style=for-the-badge"/>
+    <img src="http://img.shields.io/static/v1?label=Oracle&message=ONE&color=blue&style=for-the-badge"/>
+    <img src="http://img.shields.io/static/v1?label=STATUS&message=FINALIZADO&color=blue&style=for-the-badge"/>
 </p>
 
 ## Sobre o Projeto:
@@ -51,5 +50,21 @@ Nossa API se concentrará especificamente nos tópicos, e deve permitir aos usu�
 :o:      Endpoint de Status
   - Atualizar Status para Solucionado - Fechado - Não Solucionado
 
+## Documentação do Projeto
+<a href="http://localhost:8080/swagger-ui/index.html">Swagger
+
+
 ## Banco do Projeto
 <img src="https://raw.githubusercontent.com/juancassiano/forum-alura/master/src/main/resources/assets/forum_alura_api.png" />
+
+
+## Tecnologias
+
+<div style="display: inline_block"><br>
+  <img height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original-wordmark.svg">
+  <img height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg">
+  <img height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg">
+  <img height="30" width="40" src="">
+  <img height="30" width="40" src="https://github.com/devicons/devicon/blob/master/icons/express/express-original-wordmark.svg">
+
+</div>

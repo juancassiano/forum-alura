@@ -65,15 +65,21 @@
             <artifactId>modelmapper</artifactId>
             <version>3.0.0</version>
         </dependency>
-<!--        		<dependency>-->
-<!--			<groupId>org.springframework.security</groupId>-->
-<!--			<artifactId>spring-security-test</artifactId>-->
-<!--			<scope>test</scope>-->
-<!--		</dependency>-->
-<!--		<dependency>-->
-<!--			<groupId>org.springframework.boot</groupId>-->
-<!--			<artifactId>spring-boot-starter-security</artifactId>-->
-<!--		</dependency>-->
+
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-starter-common</artifactId>
+			<version>2.0.4</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+			<version>2.0.4</version>
+		</dependency>
+
+
+
+
 	</dependencies>
 
 	<build>
@@ -90,7 +96,9 @@
 					</excludes>
 				</configuration>
 			</plugin>
+
 		</plugins>
+
 	</build>
 
 </project>
