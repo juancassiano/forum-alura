@@ -12,7 +12,7 @@ public class UsuarioInput{
         @NotBlank(message ="{nome.obrigatorio}")
         private String nome;
         @NotBlank(message ="{email.obrigatorio}")
-        @Email(message = "{email.valido}")
+        @Email(message = "{email.invalido}")
         private String email;
 
         @NotBlank(message = "{senha.obrigatorio}")

@@ -18,10 +18,10 @@ public class CadastroUsuarioService {
 
     @Transactional
     public Usuario salvar(Usuario usuario){
-        Optional<Usuario> usuarioExistente = usuarioRepository.findByCodigoOrEmail(usuario.getEmail(), usuario.getCodigo());
+        Optional<Usuario> usuarioEmailExistente = usuarioRepository.findByEmail(usuario.getEmail());
 
-        if(usuarioExistente.isPresent() && !usuarioExistente.get().equals(usuario)){
-            throw new UsuarioEmUsoException(usuario.getCodigo());
+        if(usuarioEmailExistente.isPresent()){
+            throw new UsuarioEmUsoException(usuario.getEmail());
         }
         return usuarioRepository.save(usuario);
 
