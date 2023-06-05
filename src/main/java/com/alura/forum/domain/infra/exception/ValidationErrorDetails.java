@@ -21,4 +21,6 @@ public class ValidationErrorDetails{
     public static ValidationErrorDetails fromConstraintViolation(ConstraintViolation<?> constraintViolation) {
         return new ValidationErrorDetails(constraintViolation.getPropertyPath().toString(), constraintViolation.getMessage());
     }
+
+
 }
